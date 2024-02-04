@@ -30,7 +30,6 @@ public class App
                         String stnumstr = sc.nextLine();
                         int stnum = Integer.parseInt(stnumstr);
 
-
                         newStudent = new Student(name, stnum);
                         university.addStudent(newStudent);
 
@@ -39,10 +38,10 @@ public class App
                         university.listStudents();
                         break;
                     case 3:
-                        System.out.println("Will be here");
+                        university.addCourseCompletion();                        
                         break;
-                    case 4:
-                        System.out.println("Will be here");
+                        case 4:
+                        university.listCourseCompletions();
                         break;
                     case 5:
                         System.out.println("Will be here");
