@@ -40,7 +40,7 @@ public class App
                     case 3:
                         university.addCourseCompletion();                        
                         break;
-                        case 4:
+                    case 4:
                         university.listCourseCompletions();
                         break;
                     case 5:
