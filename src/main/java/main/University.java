@@ -40,7 +40,7 @@ public class University {
         System.out.println("Which student do you want to add course completion for?");
         String indexString = sc.nextLine();
         int index = Integer.parseInt(indexString);
-
+        sc.nextLine(); // consume newline
         Student student = students.get(index);
         System.out.println("What is the name of the course?");
         String courseName = sc.nextLine();
@@ -48,13 +48,17 @@ public class University {
         String courseGradeStr = sc.nextLine();
         int courseGrade = Integer.parseInt(courseGradeStr);
         
+        sc.nextLine(); // consume newline
         student.addCourseCompletion(courseName, courseGrade);
     } 
 
     public void listCourseCompletions() {
         listSomehow();
         System.out.println("Which student do you want to list course completions for?");
-        int studentIndex = sc.nextInt();
+        String studentIndexStr = sc.nextLine();
+        int studentIndex = Integer.parseInt(studentIndexStr);
+
+        sc.nextLine(); // consume newline
         Student student = students.get(studentIndex);
         
         Map<String, Integer> courseCompletions = student.getCourseCompletions();
