@@ -3,13 +3,14 @@ package main;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 
 public class Student implements Serializable {
     private String name;
     private int stnum;
-    private Map<String, Integer> courseCompletions;
+    private LinkedHashMap<String, Integer> courseCompletions;
 
     public Student() {
         this("", 0);
@@ -18,7 +19,7 @@ public class Student implements Serializable {
     public Student(String name, int stnum) {
         this.name = name;
         this.stnum = stnum;
-        this.courseCompletions = new HashMap<>();
+        this.courseCompletions = new LinkedHashMap<>();
     }
 
     public String getName() {
