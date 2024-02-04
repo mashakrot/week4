@@ -40,8 +40,10 @@ public class University {
 
         listSomehow();
         System.out.println("Which student do you want to add course completion for?");
-        String indexString = sc.nextLine();
-        int index = Integer.parseInt(indexString);
+        int index = sc.nextInt();
+
+        // String indexString = sc.nextLine();
+        // int index = Integer.parseInt(indexString);
         
         // sc.nextLine(); // consume newline
         Student student = students.get(index);
