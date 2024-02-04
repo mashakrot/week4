@@ -44,7 +44,7 @@ public class App
                         university.listCourseCompletions();
                         break;
                     case 5:
-                        System.out.println("Will be here");
+                        university.calculateAverage();
                         break;
                     case 6:
                         System.out.println("Will be here");
