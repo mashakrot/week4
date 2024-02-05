@@ -36,22 +36,22 @@ public class University {
 
 
     public void addCourseCompletion() {
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         listSomehow();
         System.out.println("Which student do you want to add course completion for?");
-        int index = sc.nextInt();
+        int index = scanner.nextInt();
         // AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         
         // String indexString = sc.nextLine();
         // int index = Integer.parseInt(indexString);
         
-        sc.nextLine(); // consume newline
+        scanner.nextLine(); // consume newline
         Student student = students.get(index);
         System.out.println("What is the name of the course?");
-        String courseName = sc.nextLine();
+        String courseName = scanner.nextLine();
         System.out.println("What is the grade of the course?");
-        String courseGradeStr = sc.nextLine();
+        String courseGradeStr = scanner.nextLine();
         int courseGrade = Integer.parseInt(courseGradeStr);
         
         // sc.nextLine(); // consume newline
