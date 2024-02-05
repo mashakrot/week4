@@ -39,8 +39,8 @@ public class University {
         Scanner scanner = new Scanner(System.in);
         
         listSomehow();
+        System.out.println("Which student do you want to add course completion for?");       
         if(scanner.hasNext()) {
-            System.out.println("Which student do you want to add course completion for?");       
             String indexString = scanner.nextLine();
             int index = Integer.parseInt(indexString);
         
