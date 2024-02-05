@@ -37,25 +37,23 @@ public class University {
 
     public void addCourseCompletion() {
         Scanner scanner = new Scanner(System.in);
-
+        
         listSomehow();
-        System.out.println("Which student do you want to add course completion for?");
-        int index = scanner.nextInt();
-        // AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        if(scanner.hasNext()) {
+            System.out.println("Which student do you want to add course completion for?");       
+            String indexString = scanner.nextLine();
+            int index = Integer.parseInt(indexString);
         
-        // String indexString = sc.nextLine();
-        // int index = Integer.parseInt(indexString);
-        
-        scanner.nextLine(); // consume newline
-        Student student = students.get(index);
-        System.out.println("What is the name of the course?");
-        String courseName = scanner.nextLine();
-        System.out.println("What is the grade of the course?");
-        String courseGradeStr = scanner.nextLine();
-        int courseGrade = Integer.parseInt(courseGradeStr);
+            Student student = students.get(index);
+            System.out.println("What is the name of the course?");
+            String courseName = scanner.nextLine();
+            System.out.println("What is the grade of the course?");
+            String courseGradeStr = scanner.nextLine();
+            int courseGrade = Integer.parseInt(courseGradeStr);
         
         // sc.nextLine(); // consume newline
-        student.addCourseCompletion(courseName, courseGrade);
+            student.addCourseCompletion(courseName, courseGrade);
+        }
     } 
 
     public void listCourseCompletions() {
@@ -96,4 +94,8 @@ public class University {
         double average = total / courseCompletions.size();
         System.out.println("Average is " + average);
     }
+
+    // public void writeStudentsToFile() {
+    //     String filePath =  ""
+    // }
 }
