@@ -46,7 +46,7 @@ public class University {
         // String indexString = sc.nextLine();
         // int index = Integer.parseInt(indexString);
         
-        // sc.nextLine(); // consume newline
+        sc.nextLine(); // consume newline
         Student student = students.get(index);
         System.out.println("What is the name of the course?");
         String courseName = sc.nextLine();
